@@ -1,5 +1,4 @@
 # make_monthly_UBA_from_EDGAR_GNFR_NO_TOTAL_CORR_WITH_PLOTS.py
-# ------------------------------------------------------------
 # FINAL:
 # - Preserve sector seasonality 100% (EDGAR sector shapes, day-weighted normalized)
 # - NO total correction (no closure / no scaling)
@@ -9,8 +8,8 @@
 #   * Plots:
 #       - per-sector per-year: domain-mean monthly series
 #       - per-year multipanel: all sectors domain-mean
-#       - total diagnostic: sum(sectors) vs UBA total × EDGAR TOTAL shape (reference only)
-# ------------------------------------------------------------
+#       - total diagnostic: sum(sectors) vs UBA total × EDGAR TOTAL shape
+
 
 import os
 import glob
@@ -209,9 +208,7 @@ def plot_total_compare(year, t_index, dm_sum, dm_ref, out_png):
     plt.close()
 
 
-# ===============================
 # MAIN
-# ===============================
 
 def main():
     uba_all = joblib.load(UBA_PKL)
