@@ -24,9 +24,9 @@ import joblib
 import matplotlib.pyplot as plt
 
 
-# ===============================
+
 # USER SETTINGS
-# ===============================
+
 
 UBA_PKL = r"D:\DogruKodlarTez\Anthropogenic\UBA_Inv_regridded.pkl"
 EDGAR_DIR = r"D:\DogruKodlarTez\Anthropogenic\EdgarData"
@@ -49,9 +49,9 @@ WRITE_NETCDFS = True
 MAKE_PLOTS = True
 
 
-# ===============================
+
 # OUTPUT PLOT FOLDERS
-# ===============================
+
 
 PLOT_DIR = OUTDIR / "PLOTS"
 PLOT_DIR.mkdir(parents=True, exist_ok=True)
@@ -66,9 +66,8 @@ PLOT_DIR_TOTAL = PLOT_DIR / "total_checks"
 PLOT_DIR_TOTAL.mkdir(parents=True, exist_ok=True)
 
 
-# ===============================
 # GNFR → EDGAR mapping
-# ===============================
+
 
 UBA_TO_EDGAR = {
     "A": ["POWER_INDUSTRY"],
@@ -112,9 +111,6 @@ EDGAR_TOTAL_COMPONENTS = [
 ]
 
 
-# ===============================
-# HELPERS
-# ===============================
 
 def month_days(year: int) -> np.ndarray:
     return np.array([calendar.monthrange(year, m)[1] for m in range(1, 13)], dtype=float)
@@ -158,9 +154,8 @@ def normalize_day_weighted(ts12: np.ndarray, year: int) -> np.ndarray | None:
     return ts12 / denom
 
 
-# ===============================
 # PLOTTING
-# ===============================
+
 
 def plot_sector_domainmean(year, sec, t_index, dm, out_png):
     plt.figure(figsize=(10, 6))
