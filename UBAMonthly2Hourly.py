@@ -210,9 +210,9 @@ def plot_year_multipanel(year: int, series_dict: dict, out_png: Path):
     plt.close(fig)
 
 
-# ===============================
+
 # LOAD AUX TABLES
-# ===============================
+
 weekly_profiles = pd.read_csv(AUX_DIR / "weekly_profiles.csv", sep=";", header=0)
 weekend_days = pd.read_csv(AUX_DIR / "weekenddays.csv", sep=";", header=0)
 week_days = pd.read_csv(AUX_DIR / "weekdays.csv", sep=";", header=0)
@@ -243,9 +243,9 @@ TZ_ID = int(tz_row.iloc[0]["TZ_id"])
 UTC_REF_BASE = int(tz_row.iloc[0]["UTC_reference"])
 
 
-# ===============================
+
 # MAIN
-# ===============================
+
 def main():
     monthly_files = sorted(UBA_MONTHLY_DIR.glob("UBA_CH4_*_GNFR-*_monthly.nc"))
     if not monthly_files:
