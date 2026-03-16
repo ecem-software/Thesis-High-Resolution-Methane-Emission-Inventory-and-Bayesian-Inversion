@@ -24,11 +24,9 @@ import xarray as xr
 import matplotlib.pyplot as plt
 
 
-# ===============================
-# USER SETTINGS
-# ===============================
 
-# Your UBA monthly sector files folder
+
+
 UBA_MONTHLY_DIR = Path(r"D:\DogruKodlarTez\Anthropogenic\Results\Data\UBA_MONTHLY_FROM_EDGAR_SHAPE_NO_TOTAL_CORR")
 
 # Outputs
@@ -86,9 +84,9 @@ GNFR_NAMES = {
 H_COLS = [f"h{i}" for i in range(1, 25)]
 
 
-# ===============================
+
 # OUTPUT FOLDERS
-# ===============================
+
 PLOT_DIR = OUTDIR / "PLOTS"
 PLOT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -102,9 +100,9 @@ EXCEL_DIR = OUTDIR / "EXCEL"
 EXCEL_DIR.mkdir(parents=True, exist_ok=True)
 
 
-# ===============================
+
 # HELPERS
-# ===============================
+
 def parse_year_sector(p: Path):
     # UBA_CH4_2020_GNFR-A_monthly.nc
     m = re.search(r"UBA_CH4_(\d{4})_GNFR-([A-L])_monthly\.nc$", p.name)
