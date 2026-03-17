@@ -1,0 +1,1 @@
+https://springernature.figshare.com/collections/High_resolution_temporal_profiles_in_the_Emissions_Database_for_Global_Atmospheric_Research_EDGAR_/4780547 hourly profiles are reachable from this link 
